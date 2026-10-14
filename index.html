@@ -1,1 +1,336 @@
+<!DOCTYPE html>
+<html>
+<head>
 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Momo ❤️ Jaana</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Georgia,serif;
+background:linear-gradient(135deg,#250014,#7a0035,#420066);
+color:white;
+text-align:center;
+overflow-x:hidden;
+}
+
+.page{
+min-height:100vh;
+display:none;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+padding:30px;
+box-sizing:border-box;
+}
+
+.active{
+display:flex;
+}
+
+.card{
+background:rgba(0,0,0,0.6);
+padding:35px;
+border-radius:25px;
+max-width:400px;
+box-shadow:0 0 35px #ff0066;
+}
+
+h1{
+color:#ff7bb5;
+font-size:35px;
+}
+
+h2{
+color:#e0b3ff;
+}
+
+.heart{
+font-size:60px;
+animation:beat 1s infinite;
+}
+
+@keyframes beat{
+50%{transform:scale(1.3);}
+}
+
+button{
+padding:14px 25px;
+border:none;
+border-radius:30px;
+font-size:18px;
+margin:10px;
+cursor:pointer;
+}
+
+.next{
+background:#ff0066;
+color:white;
+}
+
+.no{
+background:#555;
+color:white;
+position:absolute;
+}
+
+.details{
+font-size:19px;
+line-height:2;
+}
+
+.love{
+font-style:italic;
+color:#ffd6e7;
+font-size:18px;
+}
+
+.rose{
+position:fixed;
+font-size:25px;
+animation:fall 8s linear infinite;
+}
+
+@keyframes fall{
+from{top:-50px;}
+to{top:100vh;}
+}
+
+#final{
+font-size:25px;
+color:#ffd1e6;
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="rose">🌹</div>
+<div class="rose" style="left:40%;animation-delay:2s">❤️</div>
+<div class="rose" style="left:75%;animation-delay:4s">💜</div>
+
+
+
+<!-- PAGE 1 -->
+
+<div class="page active" id="p1">
+
+<div class="card">
+
+<div class="heart">❤️</div>
+
+<h1>🚨 WARNING 🚨</h1>
+
+<p>
+Jaana has been selected for a very important mission by Momo 😂❤️
+</p>
+
+<p>
+A surprise is waiting...
+</p>
+
+<button class="next" onclick="show(2)">
+Open Surprise 🎁
+</button>
+
+</div>
+
+</div>
+
+
+
+
+<!-- PAGE 2 -->
+
+<div class="page" id="p2">
+
+<div class="card">
+
+<h1>💌 Official Invitation</h1>
+
+<p>
+You are invited for a very serious celebration...
+(no excuses accepted 😤😂)
+</p>
+
+
+<div class="details">
+
+🎂 Birthday: 20 October<br>
+
+🎉 Celebration: 21 October<br>
+
+🏠 Venue: Your Home<br>
+
+⏰ Time: 5 PM
+
+</div>
+
+
+<button class="next" onclick="show(3)">
+Continue ❤️
+</button>
+
+</div>
+
+</div>
+
+
+
+
+
+<!-- PAGE 3 -->
+
+<div class="page" id="p3">
+
+<div class="card">
+
+<h1>😂 Mission Details</h1>
+
+<p>
+Jaana's duties:
+</p>
+
+<p>
+🎂 Eat cake<br>
+😂 Laugh with Momo<br>
+❤️ Make memories<br>
+😌 Give Momo attention
+</p>
+
+
+<p>
+Will you accept this mission?
+</p>
+
+
+<button class="next" onclick="show(4)">
+YES ❤️
+</button>
+
+
+<button class="no" onmouseover="runAway()">
+NO 😒
+</button>
+
+
+</div>
+
+</div>
+
+
+
+
+
+<!-- PAGE 4 -->
+
+<div class="page" id="p4">
+
+<div class="card">
+
+<h1>❤️ A Message From Momo</h1>
+
+
+<p class="love">
+
+Thank you for being my favourite person,
+my comfort place and my biggest smile.
+
+<br><br>
+
+Life is more fun with you in it ❤️
+
+<br><br>
+
+I hope this birthday brings you as much happiness
+as you bring to me.
+
+<br><br>
+
+— Momo 💕
+
+</p>
+
+
+<button class="next" onclick="show(5)">
+Final Surprise 🎉
+</button>
+
+
+</div>
+
+</div>
+
+
+
+
+
+
+<!-- PAGE 5 -->
+
+<div class="page" id="p5">
+
+<div class="card">
+
+<div class="heart">🎉❤️</div>
+
+<h1 id="final">
+Mission Completed!
+</h1>
+
+
+<p>
+Congratulations Jaana 😂❤️
+</p>
+
+<p>
+You are officially stuck with Momo forever 💕
+
+</p>
+
+<p>
+See you on 21 October ❤️
+</p>
+
+
+</div>
+
+</div>
+
+
+
+<script>
+
+function show(num){
+
+document.querySelectorAll(".page").forEach(function(page){
+page.classList.remove("active");
+});
+
+document.getElementById("p"+num).classList.add("active");
+
+}
+
+
+function runAway(){
+
+let btn=document.querySelector(".no");
+
+btn.style.left=Math.random()*250+"px";
+btn.style.top=Math.random()*400+"px";
+
+}
+
+
+</script>
+
+
+</body>
+</html>
