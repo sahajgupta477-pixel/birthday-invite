@@ -1,1 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Jaana ❤️</title>
 
+<style>
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(135deg, #2b001f, #6a003c, #3b0066);
+  font-family: 'Georgia', serif;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.card {
+  background: rgba(0,0,0,0.55);
+  width: 85%;
+  max-width: 420px;
+  padding: 30px;
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: 0 0 30px #ff0066;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from {box-shadow:0 0 15px #ff0066;}
+  to {box-shadow:0 0 40px #b000ff;}
+}
+
+h1 {
+  color: #ff4d88;
+  font-size: 38px;
+}
+
+h2 {
+  color: #d9a3ff;
+}
+
+.heart {
+  font-size: 45px;
+  animation: beat 1s infinite;
+}
+
+@keyframes beat {
+  50% {transform: scale(1.3);}
+}
+
+.details {
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+button {
+  margin-top:20px;
+  padding:12px 25px;
+  border:none;
+  border-radius:30px;
+  background:#ff0066;
+  color:white;
+  font-size:18px;
+}
+
+.petals {
+  position:absolute;
+  font-size:25px;
+  animation: fall 6s linear infinite;
+}
+
+@keyframes fall {
+  from {transform:translateY(-100px);}
+  to {transform:translateY(100vh);}
+}
+</style>
+</head>
+
+
+<body>
+
+<div class="petals">🌹</div>
+<div class="petals" style="left:30%;animation-delay:2s">💜</div>
+<div class="petals" style="left:70%;animation-delay:4s">❤️</div>
+
+
+<div class="card">
+
+<div class="heart">❤️</div>
+
+<h1>Hey Jaana!</h1>
+
+<h2>You are invited 💌</h2>
+
+<p>
+A little celebration for a very special person ✨
+</p>
+
+<div class="details">
+
+🎂 Birthday: 20 October<br>
+
+🎉 Celebration: 21 October<br>
+
+🏠 Venue: Your Home<br>
+
+⏰ Time: 5:00 PM
+
+</div>
+
+
+<p>
+Come with your smiles, because Momo has planned something special for you ❤️
+</p>
+
+
+<button>
+See you Jaana 💕
+</button>
+
+
+</div>
+
+</body>
+</html>
